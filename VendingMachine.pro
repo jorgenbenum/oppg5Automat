@@ -5,8 +5,10 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     soda.cpp \
-    vendingmachine.cpp
+    vendingmachine.cpp \
+    owner.cpp
 
 HEADERS += \
     soda.h \
-    vendingmachine.h
+    vendingmachine.h \
+    owner.h

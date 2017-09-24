@@ -29,3 +29,36 @@ void VendingMachine::printInventory()
 {
     std::cout << "Number of soda types registered: " << sodaTypes_.size() << std::endl;
 }
+
+
+// Print menu function
+void VendingMachine::printMenu() // kunne egentlig tatt in brus med (Soda a) og printet a.name_
+{
+    std::cout << "\nSoda types: \nCola \nFanta \nSprite \n"  << std::endl;
+}
+
+
+// Print volume of contained liquid
+void VendingMachine::printLiquid(Soda a, Soda b, Soda c)
+{
+    float volum = a.boxSize_*a.inventory_+b.boxSize_*b.inventory_+c.boxSize_*c.inventory_;
+    std::cout << "Amount of Liquid contained in the machine (liters): " << volum << std::endl;
+}
+
+
+// Access for service
+void VendingMachine::Service()
+{
+    int x;
+    std::cout <<"Enter service key" << std::endl;
+    std::cin >> x;
+
+    if (x == 1221)
+    {
+        std::cout <<"Service menu open" << std::endl;
+    }
+    else
+    {
+        std::cout <<"you are not authorized to access this area" << std::endl;
+    }
+}

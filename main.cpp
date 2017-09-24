@@ -3,6 +3,7 @@
 
 #include <soda.h>               // Include Soda class header (makes class declaration visible).
 #include <vendingmachine.h>     // Include VendingMachine clase header (makes class declaration visible).
+#include <owner.h>              // Include Owner class header (makes class delaration visabel).
 
 
 // This is a C++ style comment. Compiler will ignore all comments.
@@ -11,24 +12,29 @@
 // The C++ program starts execution here.
 int main()
 {
+    // Print machine owner after startup
+    Owner JB("Jorgen Benum");
+
+
     // Print a message at startup.
 
     // Create vendingMachine object. Constructor will be called with no parameters.
     VendingMachine vendingMachine;
+
     // Print inventory using public printInventory member function (method).
     vendingMachine.printInventory();
 
 
     // Create a cola object. Constructor will be called with given parameters.
-    Soda cola("Colabrus", 34, 4);
+    Soda cola("Colabrus", 34, 4, 0.45);
     // We have a variable named cola with Soda as its data type.
 
     // Create a fanta object. Constructor will be called with given parameters.
-    Soda fanta("Fantabrus", 35, 7);
+    Soda fanta("Fantabrus", 35, 7, 0.33);
     // We have a variabel named fanta with Soda as its data type.
 
     // Create a sprite object. Constructor will be called with given parameters.
-    Soda sprite("Spritebrus", 32, 3);
+    Soda sprite("Spritebrus", 32, 3, 0.5);
     // We have a variabel named sprite with Soda as its data type.
 
 
@@ -45,10 +51,19 @@ int main()
     // Print inventory using public printInventory member function (method).
     vendingMachine.printInventory();
 
+    // Print menu with types of soda
+    vendingMachine.printMenu();
+
+    // Print amount of liquid contained
+    vendingMachine.printLiquid(cola, fanta, sprite);
+
+    // Service access key
+    vendingMachine.Service();
+
 
 
     // Print a message just before exiting.
-    std::cout << "* * *" << std::endl;
+    std::cout << "\n* * *" << std::endl;
     std::cout << "Vending machine shutting down ... BYE!" << std::endl << std::endl;
 
 

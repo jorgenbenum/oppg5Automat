@@ -26,6 +26,15 @@ public:
     // Member function. Returns nothing and takes no parameters.
     void printInventory();
 
+    // Member function. Returns nothing and takes no paramters.
+    void printMenu();
+
+    // Member function. Returns nothing and takes 3 paramters
+    void printLiquid(Soda a, Soda b, Soda c);
+
+    // Member function. Returns notinhing and takes no paramters, only input from user
+    void Service();
+
 
 private:
 
